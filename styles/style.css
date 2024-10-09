@@ -1,0 +1,328 @@
+/* ---VARIABLES -- */
+:root {
+
+    --color-primary: white;
+    --color-shadow: #25252556;
+    --color-semi-transparent: rgba(255, 255, 255, 0.087);
+    --color-background: rgba(161, 116, 78, 0.961);
+
+    --font-text: "Trebuchet MS", "Lucia Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+/* ---CSS RESET--- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+/* ROOT FONT-SIZE SET TO 62.5% */
+html {
+font-size: 62.5%;
+}  
+
+body {
+
+    height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    max-width: 100%;
+    scrollbar-width: none;
+    overflow-x: hidden;
+
+    /* FONT-SIZE SET TO ORIGINAL 16PX USING 6rem. */
+    font-size: 1.6rem;
+    background-color: var(--color-background);
+}
+/* GUIDE HELPER */
+/* * {
+    outline: 1px solid red;
+} */
+
+/* TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-text);
+    letter-spacing: 0.1rem;
+    color: var(--color-primary);
+    padding: 2rem 0;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+   font-size: 3.2rem;
+}
+
+h3 {
+   font-size: 2.2rem;
+}
+
+p, a, li {
+    font-family: var(--font-text);
+    font-size: 1.8rem;
+    color:var(--color-primary);
+    text-decoration: none;
+    padding: 0.2rem 0;
+}
+
+/* IMAGES */
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 10rem;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+}
+
+button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+/* ---#1.0 RESPONSIVE WEBPAGE TEMPLATE */
+/*---#1.1 FOR DESKTOP--- */
+body {
+ display: flex;
+ justify-content: flex-start;
+ align-content: center;
+ flex-direction: column;
+}
+
+header {
+     background-color: rgba(161, 116, 78, 0.961);
+     color: var(--color-font-primary);
+     padding: var(--spacing-sm);
+
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     align-self: stretch;
+     box-shadow: 0 5rem 3rem var(--color-shadow);
+     padding: 0.2rem;
+     z-index: 1;
+ }
+
+ 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    min-height: 5rem;
+    height: 5rem;
+    margin-left: 2rem;
+}
+
+.logo p {
+    margin-left: 2rem;
+}
+
+nav ul li {
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    margin-right: 2rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../Images/background-coffee.webP");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+section {
+    padding: 2rem 1rem;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../ImageS/COFFEE.webP");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 5rem 10rem var(--color-background);
+}
+
+.hero-text {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ---SECTION ABOUT ---*/
+.main-logo {
+    display: inline;
+    height: 8rem;
+    max-height: 8rem;
+    min-height: 5rem;
+    margin: 2rem 0;
+}
+
+#about p {
+    margin-bottom: 2rem;
+    
+}
+
+.Block {
+    background-color: rgba(161, 115, 78, 0.733);
+    margin: 20px; 
+    padding: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 0.5rem;
+   box-shadow: 0rem 5rem 5rem var(--color-background);
+}
+
+blockquote {
+    color:rgb(159, 240, 152);
+    position: relative;
+    font-size: larger;
+    font-style: italic;
+    line-height: 1.2;
+    padding-left: 3em;
+    margin-bottom: 2em;
+  }
+  
+  blockquote::before {
+    content:"\201c";
+    display: block;
+    position: absolute;
+    left: -0.2em;
+    top: -0.2em;
+    font-size: 5em;
+    padding-left: 0.2em;
+    color: var(--font-color-accent)
+ }
+  
+  blockquote cite {
+  display: block;
+  font-size: xx-large;
+ margin-top: 0.2em;
+  }
+  
+  blockquote cite::before {
+    content: "\2014 \2009";
+  }
+
+/* RESPONSIVE CONTAINER */
+.container-responsive {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(75, 50, 27, 0.548);
+    padding: 3rem;
+    margin: 2rem;
+    border-radius: 2rem;
+
+    box-shadow: 0rem 5rem 5rem var(--color-background);
+ }
+ 
+/* SECTION COFFEE  */
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 30rem;
+    border-radius: 2rem;
+    background-color: var(--color-semi-transparent);
+    box-shadow: 0rem 5rem 5rem var(--color-background);
+    margin: 2rem;
+}
+
+.card img {
+    border-radius: 2rem 2rem 0 0;
+}
+
+.info {
+    text-align: left;
+    padding: 1rem 2rem;
+}
+
+/* FOOTER */
+ 
+footer {
+    background-color: rgba(255, 157, 157, 0.055);
+    color: var(--color-font-primary);
+    padding: var(--spacing-sm);
+    text-decoration: rgba(255, 157, 157, 0.337);
+
+    align-self: stretch;
+    text-align: center;
+    box-shadow: 0 -5rem 3rem var(--color-shadow);
+    margin-top: auto;
+    padding: 1rem 0 2rem 0;
+    z-index:1;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+}
+
+.social-icon {
+    height: 2rem;
+    min-height: 2rem;
+    filter: invert(100%);
+    margin : 1rem 1rem;
+}
+
+.button-back-top {
+    align-self: flex-end;
+    text-align:right;
+    margin-right: 0.5rem;
+}
+
+.rights {
+    font-size: smaller;
+    margin-top: 1rem;
+}
+
+/* #1.2 FOR MOBILES--*/
+ /* 1.2 FOR MOBILE */
+ @media only screen and (max-width: 600px) {
+    .container-responsive {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        display:flex;
+        flex-direction: column;
+    }
+}
